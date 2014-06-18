@@ -1,0 +1,4 @@
+[submodule "api"]
+	path = api
+	url = https://github.com/bign8/ArrestDB.git
+	branch = ng
