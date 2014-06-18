@@ -9,17 +9,17 @@ Designed on-top of [ArrestDB](https://github.com/bign8/ArrestDB) to be the main 
 POST `//host.com/api/login`
 ```json
 {
-    'user': 'one@example.com',
-    'pass': 'xxxyyyzzz',
+    "user": "one@example.com",
+    "pass": "xxxyyyzzz",
 }
 ```
 Response:
 ```json
 {
-    'success': {
-        'code': 200,
-        'status': 'OK',
-        'userID': '1',
+    "success": {
+        "code": 200,
+        "status": "OK",
+        "userID": "1",
     }
 }
 
