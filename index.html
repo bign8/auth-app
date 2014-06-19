@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="auth">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title ng-bind="'Authentication &mdash; ' + $root.title">Authentication</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="/css.css">
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1>
+				<span ng-bind="$root.title">Welcome</span>
+				<small ng-bind="$root.subTitle" ng-show="$root.subTitle"></small>
+			</h1>
+		</div>
+		<div ng-view>Loading...</div>
+	</div>
+
+	<!-- Le javascript ================================================== -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-route.min.js"></script>
+	<script src="/js.js"></script>
+</body>
+</html>
