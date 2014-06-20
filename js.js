@@ -5,7 +5,9 @@
  * ------------------------------------------------------------------- */
 
 angular.module('auth', [
+	'ArrestDB',
 	'ngRoute',
+	'ui.bootstrap',
 ]).
 
 // Configure Routes
@@ -45,6 +47,7 @@ service('AuthService', function () {
 // Index controller
 controller('index', ['$scope', function ( $scope ) {
 	$scope.test = 'test';
+	$scope.state = 'login'; // frogot, register
 }]).
 
 // Edit Controller
