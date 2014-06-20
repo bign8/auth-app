@@ -12,8 +12,12 @@ angular.module('auth', [
 config(['$routeProvider', function ( $routeProvider ) {
 	$routeProvider.when('/', {
 		controller: 'index',
-		templateUrl: 'tpl/index.html',
+		templateUrl: '/tpl/index.html',
 		title: 'Welcome',
+	}).when('/edit', {
+		controller: 'edit',
+		templateUrl: '/tpl/edit.html',
+		title: 'Edit',
 	}).otherwise({
 		redirectTo: '/'
 	});
@@ -27,7 +31,28 @@ run(['$rootScope', '$route', function ( $rootScope, $route ) {
 	});
 }]).
 
+// Authenticating service
+service('AuthService', function () {
+	var access = 1;
+	this.setAccess = function (value) {
+		access = value;
+	};
+	this.getAccess = function () {
+		return access;
+	};
+}).
+
 // Index controller
 controller('index', ['$scope', function ( $scope ) {
 	$scope.test = 'test';
+}]).
+
+// Edit Controller
+controller('edit', ['$scope', function ( $scope ) {
+	$scope.test = 'edit';
+}]).
+
+// Manage Controller
+controller('manage', ['$scope', function ($scope) {
+	$scope.test = 'manage';
 }]);
